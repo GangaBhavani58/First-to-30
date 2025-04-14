@@ -1,0 +1,17 @@
+<div class="scoreboard-card mt-4 text-center">
+  <h4 class="text-primary mb-3">🏆 Scoreboard</h4>
+  <div class="d-flex justify-content-around">
+    <div>
+      👱 You
+      <span class="badge bg-success ms-2">{{
+        gameService.userScore$ | async
+      }}</span>
+    </div>
+    <div>
+      🤖 Computer
+      <span class="badge bg-danger ms-2">{{
+        gameService.computerScore$ | async
+      }}</span>
+    </div>
+  </div>
+</div>

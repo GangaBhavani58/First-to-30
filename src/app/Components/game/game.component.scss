@@ -1,0 +1,24 @@
+/* src/app/components/game/game.component.css */
+.card {
+  max-width: 500px;
+  margin: auto;
+}
+
+.list-group-item {
+  background-color: #f0f4ff; // Light blue shade
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #dde8ff; // Hover effect
+}
+
+/* Scoreboard container style */
+.scoreboard-card {
+  background-color: #fff3cd; // Light yellow pastel
+  border: 1px solid #ffeeba;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}

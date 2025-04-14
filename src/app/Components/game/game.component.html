@@ -1,0 +1,38 @@
+<div
+  class="card shadow-lg p-4 text-center"
+  [ngClass]="{ 'bg-dark text-white': isDarkMode }"
+>
+  <h2 class="text-primary mb-3">🎮 First to 30 — Smart Game</h2>
+
+  <button class="btn btn-sm btn-outline-secondary mb-3" (click)="toggleTheme()">
+    {{ isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode" }}
+  </button>
+
+  <p class="lead">Current Number: {{ currentNumber }}</p>
+
+  <div *ngIf="!gameOver" class="mb-3" [@fadeInOut]>
+    <p class="fw-bold">Choose your move:</p>
+    <button class="btn btn-outline-primary me-2" (click)="userPlay(1)">
+      +1
+    </button>
+    <button class="btn btn-outline-success" (click)="userPlay(2)">+2</button>
+  </div>
+
+  <!-- 🏆 Winner Message -->
+  <div *ngIf="gameOver">
+    <div [@fadeInOut]>
+      <div *ngIf="winnerMessage" class="alert alert-success">
+        <strong>{{ winnerMessage }}</strong>
+      </div>
+    </div>
+    <button class="btn btn-warning mt-2" (click)="startGame()">
+      🔁 Restart Game
+    </button>
+  </div>
+
+  <hr class="my-4" />
+  <h5 class="text-secondary">🔍 Move History</h5>
+  <ul class="list-group mt-2" style="max-height: 200px; overflow-y: auto">
+    <li class="list-group-item" *ngFor="let log of movesLog">{{ log }}</li>
+  </ul>
+</div>
