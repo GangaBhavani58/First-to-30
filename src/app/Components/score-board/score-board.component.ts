@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GameOperationsService } from '../../services/game-operations.service';
 import { AsyncPipe, CommonModule } from '@angular/common';
 
@@ -12,11 +12,16 @@ import { AsyncPipe, CommonModule } from '@angular/common';
 export class ScoreBoardComponent {
   userScore = 0;
   computerScore = 0;
+  @Input() darkMode: boolean = false;
 
   constructor(public gameService: GameOperationsService) {
     this.gameService.userScore$.subscribe((score) => (this.userScore = score));
     this.gameService.computerScore$.subscribe(
       (score) => (this.computerScore = score)
     );
+  }
+
+  ngOnChanges() {
+    // console.log('val>>', this.darkMode);
   }
 }

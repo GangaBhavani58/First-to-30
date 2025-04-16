@@ -2,11 +2,12 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { GameOperationsService } from '../../services/game-operations.service';
 import { CommonModule } from '@angular/common';
+import { ScoreBoardComponent } from '../score-board/score-board.component';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScoreBoardComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss',
   animations: [

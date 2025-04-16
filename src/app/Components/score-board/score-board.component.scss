@@ -1,3 +1,27 @@
 .scoreboard-card {
-  margin-bottom: 40px; /* Adjust as needed */
+  margin-top: 1rem;
+
+  h4 {
+    color: #1565c0;
+  }
+
+  background-color: #e3f2fd;
+  border-left: 6px solid #2196f3;
+  color: #0d47a1;
+  padding: 1rem;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.scoreboard-card.dark-mode {
+  background: linear-gradient(to bottom right, #263238, #37474f);
+  border-left: 6px solid #4fc3f7;
+  color: #e1f5fe;
+}
+
+.scoreboard-card.dark-mode h4 {
+  color: #81d4fa;
 }

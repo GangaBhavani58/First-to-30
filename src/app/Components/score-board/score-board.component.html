@@ -1,4 +1,7 @@
-<div class="scoreboard-card mt-4 text-center">
+<div
+  class="scoreboard-card mt-4 text-center"
+  [ngClass]="{ 'dark-mode': darkMode }"
+>
   <h4 class="text-primary mb-3">🏆 Scoreboard</h4>
   <div class="d-flex justify-content-around">
     <div>

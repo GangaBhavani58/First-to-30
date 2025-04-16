@@ -5,20 +5,187 @@
 }
 
 .list-group-item {
-  background-color: #f0f4ff; // Light blue shade
+  background-color: #f0f4ff;
   border: none;
   transition: background-color 0.3s;
 }
 
 .list-group-item:hover {
-  background-color: #dde8ff; // Hover effect
+  background-color: #dde8ff;
 }
 
 /* Scoreboard container style */
 .scoreboard-card {
-  background-color: #fff3cd; // Light yellow pastel
+  background-color: #fff3cd;
   border: 1px solid #ffeeba;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.instructions-container {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.instructions-container h2,
+.instructions-container h3 {
+  margin-top: 0.5rem;
+}
+
+.instructions-container ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.game-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.instructions-container {
+  flex: 1;
+  max-width: 300px;
+}
+
+.game-column {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.scoreboard-wrapper {
+  flex: 1;
+  max-width: 200px;
+}
+
+.instructions-container {
+  background: #e0f7fa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #004d40;
+  transition: background 0.3s, color 0.3s;
+}
+
+.instructions-container h2,
+.instructions-container h3 {
+  margin-top: 0.5rem;
+  color: #00796b;
+}
+
+.instructions-container ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.instructions-container.dark-mode {
+  background: #263238;
+  color: #e0f2f1;
+}
+
+.instructions-container.dark-mode h2,
+.instructions-container.dark-mode h3 {
+  color: #80cbc4;
+}
+
+.instructions-container.dark-mode {
+  background: linear-gradient(to bottom right, #37474f, #263238);
+  border: 1px solid #546e7a;
+  color: #e0f7fa;
+}
+
+.instructions-container {
+  background-color: #e0f7fa;
+  border-left: 6px solid #17a2b8;
+  padding: 1rem;
+  border-radius: 12px;
+  color: #004d40;
+
+  &.dark {
+    background-color: #263238;
+    border-left: 6px solid #4dd0e1;
+    color: #e0f2f1;
+  }
+}
+
+.move-item.win {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 5px solid #28a745;
+}
+
+.move-item.loss {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 5px solid #dc3545;
+}
+
+.move-item.neutral {
+  background-color: #e2e3e5;
+  color: #383d41;
+  border-left: 5px solid #6c757d;
+}
+
+.instructions-container {
+  background-color: #e3f2fd;
+  border-left: 6px solid #2196f3;
+  color: #0d47a1;
+  padding: 1rem;
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.instructions-container h2,
+.instructions-container h3 {
+  color: #1565c0;
+}
+
+.instructions-container.dark-mode {
+  background: linear-gradient(to bottom right, #263238, #37474f);
+  border-left: 6px solid #4fc3f7;
+  color: #e1f5fe;
+}
+
+.instructions-container.dark-mode h2,
+.instructions-container.dark-mode h3 {
+  color: #81d4fa;
+}
+
+.theme-toggle {
+  background-color: #29b6f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background-color: #0288d1;
+  }
+
+  &.dark {
+    background-color: #4dd0e1;
+    color: #212121;
+
+    &:hover {
+      background-color: #00bcd4;
+    }
+  }
 }
